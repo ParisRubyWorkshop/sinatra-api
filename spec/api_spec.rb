@@ -14,8 +14,16 @@ RSpec.describe Api do
     expect(last_response.body).to 'Hello world!'
   end
 
-  it '' do
-
+  it 'returns the list of movies' do
+    get '/movies'
+    expect(last_response.body).to include 'The Gold Rush'
   end
+
+  it 'returns a specific movie' do
+    get '/movies/3'
+    expect(last_response.body).to include 'The General'
+  end
+
+  # Your turn to write the next spec!
 
 end
