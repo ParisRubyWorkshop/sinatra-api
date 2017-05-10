@@ -11,7 +11,7 @@ RSpec.describe Api do
 
   it 'says hello' do
     get '/hello'
-    expect(last_response.body).to 'Hello world!'
+    expect(last_response.body).to eq 'Hello world!'
   end
 
   it 'returns the list of movies' do
